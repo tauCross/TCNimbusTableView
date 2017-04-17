@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import "NIMutableTableViewModel.h"
+
 @interface ViewController ()
 
 @end
