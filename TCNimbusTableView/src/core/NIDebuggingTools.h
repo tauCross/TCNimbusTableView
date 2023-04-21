@@ -107,9 +107,15 @@ int NIIsInDebugger(void);
 #if TARGET_IPHONE_SIMULATOR
 // We leave the __asm__ in this macro so that when a break occurs, we don't have to step out of
 // a "breakInDebugger" function.
+#if __arm64__
+#define NIDASSERT(xx) { if (!(xx)) { NIDPRINT(@"NIDASSERT failed: %s", #xx); \
+if (NIDebugAssertionsShouldBreak && NIIsInDebugger()) { __asm__(".inst 0xd4200000"); } } \
+} ((void)0)
+#else
 #define NIDASSERT(xx) { if (!(xx)) { NIDPRINT(@"NIDASSERT failed: %s", #xx); \
 if (NIDebugAssertionsShouldBreak && NIIsInDebugger()) { __asm__("int $3\n" : : ); } } \
 } ((void)0)
+#endif
 #else
 #define NIDASSERT(xx) { if (!(xx)) { NIDPRINT(@"NIDASSERT failed: %s", #xx); \
 if (NIDebugAssertionsShouldBreak && NIIsInDebugger()) { raise(SIGTRAP); } } \
