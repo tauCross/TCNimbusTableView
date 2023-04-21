@@ -297,6 +297,7 @@
 				TargetAttributes = {
 					53E938611EA45DC400AF3B2E = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 44KUJGULRQ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -306,6 +307,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -486,6 +488,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 44KUJGULRQ;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = TCNimbusTableView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -498,6 +501,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 44KUJGULRQ;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = TCNimbusTableView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -525,6 +529,7 @@
 				53E9387B1EA45DC400AF3B2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
